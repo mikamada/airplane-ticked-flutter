@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "732168055554",
+    "project_id": "airplane-bwa-19d29",
+    "storage_bucket": "airplane-bwa-19d29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732168055554:android:30f5384fc1dd1101d1701b",
+        "android_client_info": {
+          "package_name": "com.mikamada.bwa_airplane_ticket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732168055554-ojimhh783uq75nsg0aag9g250p0jhm84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALrzS3WFbgACZJ41YghXxgunUN0QpoSWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732168055554-ojimhh783uq75nsg0aag9g250p0jhm84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
