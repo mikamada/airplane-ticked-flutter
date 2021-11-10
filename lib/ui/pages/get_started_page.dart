@@ -1,3 +1,4 @@
+import 'package:bwa_airplane_ticket/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
@@ -41,31 +42,17 @@ class GetStartedPage extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              Container(
-                  margin: const EdgeInsets.only(
-                    top: 50,
-                    bottom: 80,
-                  ),
-                  width: 220,
-                  height: 55,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: kPrimary,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(17),
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/sign-up');
-                    },
-                    child: Text(
-                      'Get Started',
-                      style: whiteTextSyle.copyWith(
-                        fontWeight: medium,
-                        fontSize: 18,
-                      ),
-                    ),
-                  )),
+              CustomButton(
+                margin: const EdgeInsets.only(
+                  top: 50,
+                  bottom: 80,
+                ),
+                width: 220,
+                title: 'Get Started',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/sign-up');
+                },
+              )
             ],
           ),
         ),

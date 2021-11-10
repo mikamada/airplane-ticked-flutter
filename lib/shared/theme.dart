@@ -10,6 +10,8 @@ Color kNoColor = const Color(0xffEB70A5);
 Color kBackgroundColor = const Color(0xffFAFAFA);
 Color kInactiveColor = const Color(0xffDBD7EC);
 Color kTranparent = Colors.transparent;
+Color kAvailableColor = Color(0xffE0D9FF);
+Color kUnavailableColoor = Color(0xffEBECF1);
 
 double dMargin = 24;
 double dRadius = 17;
