@@ -1,16 +1,19 @@
 import 'package:bwa_airplane_ticket/cubit/auth_cubit.dart';
+import 'package:bwa_airplane_ticket/cubit/destination_cubit.dart';
+import 'package:bwa_airplane_ticket/cubit/transaction_cubit.dart';
 import 'package:bwa_airplane_ticket/ui/pages/bonus.dart';
-import 'package:bwa_airplane_ticket/ui/pages/choose_seat_page.dart';
 import 'package:bwa_airplane_ticket/ui/pages/get_started_page.dart';
 import 'package:bwa_airplane_ticket/ui/pages/main_page.dart';
 import 'package:bwa_airplane_ticket/ui/pages/sign_in_page.dart';
 import 'package:bwa_airplane_ticket/ui/pages/sign_up_page.dart';
 import 'package:bwa_airplane_ticket/ui/pages/splash_page.dart';
+import 'package:bwa_airplane_ticket/ui/pages/success_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'cubit/page_cubit.dart';
+import 'cubit/seat_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,6 +35,15 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => AuthCubit(),
         ),
+        BlocProvider(
+          create: (context) => DestinationCubit(),
+        ),
+        BlocProvider(
+          create: (context) => SeatCubit(),
+        ),
+        BlocProvider(
+          create: (context) => TransactionCubit(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -42,7 +54,7 @@ class MyApp extends StatelessWidget {
           '/sign-in': (context) => SignInPage(),
           '/bonus': (context) => BonusPage(),
           '/main': (context) => MainPage(),
-          '/choose-seet': (context) => ChooseSeatPage(),
+          '/success': (context) => SuccessPage(),
         },
       ),
     );
