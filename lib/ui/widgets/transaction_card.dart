@@ -9,8 +9,6 @@ class TransactionCard extends StatelessWidget {
   final TransactionModel transaction;
   const TransactionCard(this.transaction, {Key? key}) : super(key: key);
 
-  // get kWhiteColor => null;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
