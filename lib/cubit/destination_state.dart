@@ -14,7 +14,7 @@ class DestinationLoading extends DestinationState {}
 class DestinationSuccess extends DestinationState {
   final List<DestinationModel> destination;
 
-  DestinationSuccess(this.destination);
+  const DestinationSuccess(this.destination);
 
   @override
   List<Object> get props => [destination];
@@ -23,7 +23,7 @@ class DestinationSuccess extends DestinationState {
 class DestinationFailed extends DestinationState {
   final String error;
 
-  DestinationFailed(this.error);
+  const DestinationFailed(this.error);
 
   @override
   List<Object> get props => [error];

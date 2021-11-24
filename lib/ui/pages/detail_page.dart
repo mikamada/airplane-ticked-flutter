@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
 
 class DetailPage extends StatelessWidget {
   final DestinationModel destination;
-  DetailPage(this.destination, {Key? key}) : super(key: key);
+  const DetailPage(this.destination, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -180,11 +180,11 @@ class DetailPage extends StatelessWidget {
                       fontSize: 16,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       InteresItem(
                         title: 'Part Kids',
                       ),
@@ -193,11 +193,11 @@ class DetailPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       InteresItem(
                         title: 'City Museum',
                       ),
@@ -211,7 +211,7 @@ class DetailPage extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 30,
                 bottom: 30,
               ),
@@ -234,7 +234,7 @@ class DetailPage extends StatelessWidget {
                             fontWeight: medium,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Text(

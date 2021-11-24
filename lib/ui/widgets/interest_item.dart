@@ -14,7 +14,7 @@ class InteresItem extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               right: 6,
             ),
             width: 16,

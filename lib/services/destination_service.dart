@@ -2,7 +2,7 @@ import 'package:bwa_airplane_ticket/models/destination_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DestinationService {
-  CollectionReference _destinationRef =
+  final CollectionReference _destinationRef =
       FirebaseFirestore.instance.collection('destinations');
 
   Future<List<DestinationModel>> fetchDestinations() async {
@@ -19,7 +19,7 @@ class DestinationService {
 
       return destinations;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

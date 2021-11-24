@@ -13,6 +13,7 @@ class SeatCubit extends Cubit<List<String>> {
     } else {
       state.remove(id);
     }
+    // ignore: avoid_print
     print(state);
     // print('new state: $state');
     emit(List.from(state));
@@ -20,6 +21,7 @@ class SeatCubit extends Cubit<List<String>> {
 
   bool isSelected(String id) {
     int index = state.indexOf(id);
+    // ignore: avoid_print
     print('index: $index');
     if (index == -1) {
       return false;

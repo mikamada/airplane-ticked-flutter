@@ -8,7 +8,7 @@ class DestinationModel extends Equatable {
   final double rating;
   final int price;
 
-  DestinationModel({
+  const DestinationModel({
     required this.id,
     this.name = '',
     this.city = '',

@@ -67,7 +67,7 @@ class SignInPage extends StatelessWidget {
           },
           builder: (context, state) {
             if (state is AuthLoading) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             }

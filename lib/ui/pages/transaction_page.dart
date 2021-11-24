@@ -23,12 +23,12 @@ class _TransactionPageState extends State<TransactionPage> {
     return BlocBuilder<TransactionCubit, TransactionState>(
       builder: (context, state) {
         if (state is TransactionLoading) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         } else if (state is TransactionSucces) {
-          if (state.transaction.length == 0) {
-            return Center(
+          if (state.transaction.isEmpty) {
+            return const Center(
               child: Text('Tidak ada transaksi'),
             );
           } else {
@@ -43,7 +43,7 @@ class _TransactionPageState extends State<TransactionPage> {
             );
           }
         }
-        return Center(
+        return const Center(
           child: Text(
             'Transaction Page',
           ),

@@ -15,6 +15,7 @@ class CustomButtonNavigationItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int stateValue = context.watch<PageCubit>().state;
+    // ignore: avoid_print
     print('$stateValue');
     return GestureDetector(
       onTap: () {

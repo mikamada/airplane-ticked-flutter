@@ -17,7 +17,7 @@ class CheckoutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget route() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 50,
         ),
         child: Column(
@@ -25,8 +25,8 @@ class CheckoutPage extends StatelessWidget {
             Container(
               width: 291,
               height: 65,
-              margin: EdgeInsets.only(bottom: 10),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(bottom: 10),
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/img_checkout.png',
@@ -82,8 +82,8 @@ class CheckoutPage extends StatelessWidget {
 
     Widget bookingDetails() {
       return Container(
-        margin: EdgeInsets.only(top: 30),
-        padding: EdgeInsets.symmetric(
+        margin: const EdgeInsets.only(top: 30),
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 30,
         ),
@@ -114,7 +114,7 @@ class CheckoutPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Expanded(
@@ -141,10 +141,10 @@ class CheckoutPage extends StatelessWidget {
                 Container(
                   width: 20,
                   height: 20,
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     right: 2,
                   ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
                         'assets/ic_star.png',
@@ -160,7 +160,7 @@ class CheckoutPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
@@ -223,11 +223,11 @@ class CheckoutPage extends StatelessWidget {
         builder: (context, state) {
           if (state is AuthSuccess) {
             return Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 30,
               ),
               width: double.infinity,
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 20,
                 vertical: 30,
               ),
@@ -248,19 +248,19 @@ class CheckoutPage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                       top: 16,
                     ),
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.only(
+                          margin: const EdgeInsets.only(
                             right: 16,
                           ),
                           width: 100,
                           height: 70,
                           decoration: BoxDecoration(
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               fit: BoxFit.cover,
                               image: AssetImage(
                                 'assets/card_bonus.png',
@@ -275,10 +275,10 @@ class CheckoutPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(right: 6),
+                                  margin: const EdgeInsets.only(right: 6),
                                   width: 24,
                                   height: 24,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
                                         'assets/logo.png',
@@ -311,7 +311,7 @@ class CheckoutPage extends StatelessWidget {
                                 fontSize: 18,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Text(
@@ -329,7 +329,7 @@ class CheckoutPage extends StatelessWidget {
               ),
             );
           }
-          return SizedBox();
+          return const SizedBox();
         },
       );
     }
@@ -353,8 +353,8 @@ class CheckoutPage extends StatelessWidget {
           if (state is TransactionLoading) {
             return Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.only(top: 30),
-              child: CircularProgressIndicator(),
+              margin: const EdgeInsets.only(top: 30),
+              child: const CircularProgressIndicator(),
             );
           }
 
@@ -363,7 +363,7 @@ class CheckoutPage extends StatelessWidget {
             onPressed: () {
               context.read<TransactionCubit>().createTransaction(transaction);
             },
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               top: 30,
               bottom: 30,
             ),

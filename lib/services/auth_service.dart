@@ -3,7 +3,7 @@ import 'package:bwa_airplane_ticket/services/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<UserModel> signIn({
     required String email,
@@ -19,7 +19,7 @@ class AuthService {
           await UserService().getUserByid(userCredential.user!.uid);
       return user;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -44,7 +44,7 @@ class AuthService {
 
       return user;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -52,7 +52,7 @@ class AuthService {
     try {
       await _auth.signOut();
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

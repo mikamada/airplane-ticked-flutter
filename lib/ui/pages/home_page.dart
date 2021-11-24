@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
               ),
             );
           } else {
-            return SizedBox();
+            return const SizedBox();
           }
         },
       );
@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
             ],
           );
         }
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
         );
       },

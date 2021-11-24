@@ -2,7 +2,7 @@ import 'package:bwa_airplane_ticket/models/transaction_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class TransactionService {
-  CollectionReference _transactionReference =
+  final CollectionReference _transactionReference =
       FirebaseFirestore.instance.collection('transaction');
 
   Future<void> createTransaction(TransactionModel transaction) async {
@@ -18,7 +18,7 @@ class TransactionService {
         'grandTotal': transaction.grandTotal,
       });
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -26,7 +26,8 @@ class TransactionService {
   Future<List<TransactionModel>> fetchTransaction() async {
     try {
       QuerySnapshot result = await _transactionReference.get();
-      print('ini result ${result}');
+      // ignore: avoid_print
+      print('ini result $result');
 
       List<TransactionModel> transaction = result.docs.map(
         (e) {
@@ -36,11 +37,12 @@ class TransactionService {
         },
       ).toList();
 
-      print('ini transaksi: ${transaction}');
+      // ignore: avoid_print
+      print('ini transaksi: $transaction');
 
       return transaction;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

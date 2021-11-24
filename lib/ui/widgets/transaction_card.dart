@@ -19,7 +19,7 @@ class TransactionCard extends StatelessWidget {
     return SafeArea(
       child: Container(
         margin: margin,
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 30,
         ),
@@ -50,7 +50,7 @@ class TransactionCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Expanded(
@@ -77,10 +77,10 @@ class TransactionCard extends StatelessWidget {
                 Container(
                   width: 20,
                   height: 20,
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     right: 2,
                   ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
                         'assets/ic_star.png',
@@ -96,7 +96,7 @@ class TransactionCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(

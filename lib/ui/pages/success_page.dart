@@ -18,7 +18,7 @@ class SuccessPage extends StatelessWidget {
             Container(
               width: 300,
               height: 150,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/ic_succes.png',
@@ -27,7 +27,7 @@ class SuccessPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 80),
+              margin: const EdgeInsets.only(top: 80),
               child: Column(
                 children: [
                   Text(
@@ -37,7 +37,7 @@ class SuccessPage extends StatelessWidget {
                       fontSize: 32,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
@@ -59,7 +59,7 @@ class SuccessPage extends StatelessWidget {
                     context, '/main', (route) => false);
               },
               width: 220,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 50,
               ),
             ),
