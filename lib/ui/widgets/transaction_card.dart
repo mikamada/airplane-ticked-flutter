@@ -7,12 +7,18 @@ import 'booking_detail_item.dart';
 
 class TransactionCard extends StatelessWidget {
   final TransactionModel transaction;
-  const TransactionCard(this.transaction, {Key? key}) : super(key: key);
+  final EdgeInsets margin;
+  const TransactionCard(
+    this.transaction, {
+    Key? key,
+    this.margin = EdgeInsets.zero,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        margin: margin,
         padding: EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 30,
