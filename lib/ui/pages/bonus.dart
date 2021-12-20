@@ -51,7 +51,7 @@ class BonusPage extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '${state.user.name}',
+                              state.user.name,
                               style: whiteTextSyle.copyWith(
                                 fontSize: 20,
                                 fontWeight: medium,

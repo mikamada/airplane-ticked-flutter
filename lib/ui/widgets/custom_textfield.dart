@@ -16,43 +16,41 @@ class CustomTextFromField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            label,
-            style: blackTextStyle.copyWith(fontWeight: regular),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: blackTextStyle.copyWith(fontWeight: regular),
+        ),
+        const SizedBox(
+          height: 6,
+        ),
+        Container(
+          margin: const EdgeInsets.only(
+            bottom: 20,
           ),
-          const SizedBox(
-            height: 6,
-          ),
-          Container(
-            margin: const EdgeInsets.only(
-              bottom: 20,
-            ),
-            child: TextFormField(
-              obscureText: obsecureText,
-              cursorColor: kBlackColor,
-              controller: controller,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    dRadius,
-                  ),
+          child: TextFormField(
+            obscureText: obsecureText,
+            cursorColor: kBlackColor,
+            controller: controller,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(
+                  dRadius,
                 ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(dRadius),
-                  borderSide: BorderSide(
-                    color: kPrimary,
-                  ),
-                ),
-                hintText: hint,
               ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(dRadius),
+                borderSide: BorderSide(
+                  color: kPrimary,
+                ),
+              ),
+              hintText: hint,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
