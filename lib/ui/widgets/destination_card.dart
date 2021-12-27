@@ -24,6 +24,7 @@ class DestinationCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(
           top: 30,
+          right: 20,
         ),
         padding: const EdgeInsets.all(
           10,

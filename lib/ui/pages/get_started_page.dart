@@ -35,7 +35,7 @@ class GetStartedPage extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                'Explore new world with us and let\nyourself get an amazing experiences',
+                'Explore new world with us and\nyourself get an amazing experiences',
                 style: whiteTextSyle.copyWith(
                   fontSize: 16,
                   fontWeight: light,

@@ -91,7 +91,10 @@ class _HomePageState extends State<HomePage> {
           top: 30,
         ),
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.only(
+            left: 24,
+            right: 4,
+          ),
           scrollDirection: Axis.horizontal,
           child: Row(
             children: destination.map((DestinationModel destination) {
