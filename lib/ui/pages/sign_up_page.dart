@@ -142,7 +142,7 @@ class SignUpPage extends StatelessWidget {
             child: Text(
               'Have an account? Sign In',
               style: kGreyTextStyle.copyWith(
-                fontSize: 14,
+                fontSize: 16,
                 fontWeight: light,
                 decoration: TextDecoration.underline,
               ),
